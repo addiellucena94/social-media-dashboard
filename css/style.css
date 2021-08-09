@@ -1,0 +1,325 @@
+:root {
+    --lime-green: hsl(163, 72%, 41%);
+    --bright-red: hsl(356, 69%, 56%);
+
+    --facebook-color: hsl(208, 92%, 53%);
+    --twitter-color: hsl(203, 89%, 53%);
+    --instagram-color: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    --youTube-color: hsl(348, 97%, 39%);
+
+    /*Light Theme*/
+    --toggle-bg: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --toggle-light: hsl(230, 22%, 74%);
+
+    /*Neutral*/
+    /*Dark Theme*/
+    --very-dark-blue: hsl(230, 17%, 14%); /*background*/
+    --desaturated-blue: hsl(228, 34%, 66%); /*Text*/
+    --white: hsl(0, 0%, 100%); /*Text*/
+
+    /*Light Theme*/
+    
+    --dark-grayish-blue: hsl(228, 12%, 44%); /*Text*/
+
+    /*font*/
+    --font-family: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    --top-bg: hsl(232, 19%, 15%); /*Top BG Pattern*/
+    --card-bg: hsl(228, 28%, 20%); /*Card BG*/
+    font-family: 'Inter', sans-serif;;
+    color: var(--white);
+    background-color: var(--very-dark-blue);
+}
+
+.light-mode {
+    --top-bg: hsl(225, 100%, 98%); /*Top BG Pattern*/
+    --card-bg: hsl(227, 47%, 96%); /*Card BG*/
+    color: var(--very-dark-blue);
+    background-color: var(--white);
+}
+
+.pattern {
+    width: 100%;
+    height: 25vh;
+    background-color: var(--top-bg);
+}
+
+header {
+    width: 90%;
+    max-width: 1100px;
+    padding: 40px 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-site p {
+    color: var(--desaturated-blue);
+}
+
+.toggle-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--desaturated-blue);
+    font-weight: 900;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 26px;
+    margin-left: 10px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--toggle-bg);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--top-bg);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background: var(--toggle-light);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 26px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1.5em;
+}
+
+.content > div {
+    width: 100%;
+    padding: 25px;
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-radius: 5px;
+    background-color: var(--card-bg);
+    text-align: center;
+    cursor: pointer;
+}
+
+.content > div:hover {
+    opacity: .9;
+}
+
+.box1 {
+    border-top-color: var(--facebook-color);
+}
+
+.box2 {
+    border-top-color: var(--twitter-color);
+}
+
+.box3 {
+    border-top-color: hsl(329, 70%, 58%);
+}
+
+.box4 {
+    border-top-color: var(--youTube-color);
+}
+
+.social-username {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--desaturated-blue);
+    font-size: 12px;
+}
+
+.username {
+    margin-left: 8px;
+}
+
+.social-main {
+    margin: 25px 0;
+}
+
+.social-main h1 {
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.follow {
+    text-transform: uppercase;
+    color: var(--desaturated-blue);
+    letter-spacing: 2px;
+}
+
+.social-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.up {
+    margin-left: 5px;
+    color: var(--lime-green);
+}
+
+.down {
+    margin-left: 5px;
+    color: var(--bright-red);
+}
+
+.overview {
+    width: 90%;
+    max-width: 1100px;
+    padding: 50px 0 20px;
+    margin: 0 auto;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.content2 {
+    width: 90%;
+    max-width: 1100px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1.5em;
+    grid-row-gap: 1.5em;
+}
+
+.social-cards{
+    width: 100%;
+    padding: 30px 30px 20px;
+    border-radius: 5px;
+    background-color: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.social-cards:hover {
+    opacity: .9;
+}
+
+.top-data {
+    display: flex;
+    justify-content: space-between;
+    color: var(--desaturated-blue);
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.down-data {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-data .up, .content-data .down {
+    font-size: 12px;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .title-site {
+        margin-bottom: 30px;
+    }
+
+    .title-site h1{
+        font-size: 25px;
+    }
+
+    .toggle-area {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--desaturated-blue);
+    }
+
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1.5em;
+        grid-row-gap: 1.5em;
+    }
+
+    .content2 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1.5em;
+        grid-row-gap: 1.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content {
+        grid-template-columns: 1fr;
+        grid-column-gap: 1.5em;
+        grid-row-gap: 1.5em;
+    }
+
+    .content2 {
+        grid-template-columns: 1fr;
+        grid-column-gap: 1.5em;
+        grid-row-gap: 1.5em;
+    }
+}
