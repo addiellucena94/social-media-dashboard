@@ -34,7 +34,7 @@
 body {
     --top-bg: hsl(232, 19%, 15%); /*Top BG Pattern*/
     --card-bg: hsl(228, 28%, 20%); /*Card BG*/
-    --card-bg-hover: hsl(228, 28%, 20%); /*Card BG hover*/
+    --card-bg-hover: rgb(51, 58, 86); /*Card BG hover*/
     font-family: 'Inter', sans-serif;;
     color: var(--white);
     background-color: var(--very-dark-blue);
@@ -43,7 +43,7 @@ body {
 .light-mode {
     --top-bg: hsl(225, 100%, 98%); /*Top BG Pattern*/
     --card-bg: hsl(227, 47%, 96%); /*Card BG*/
-    --card-bg-hover: #f2f2f2; /*Card BG hover*/
+    --card-bg-hover: rgb(225, 227, 240); /*Card BG hover*/
     color: var(--very-dark-blue);
     background-color: var(--white);
 }
