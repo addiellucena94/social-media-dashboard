@@ -34,6 +34,7 @@
 body {
     --top-bg: hsl(232, 19%, 15%); /*Top BG Pattern*/
     --card-bg: hsl(228, 28%, 20%); /*Card BG*/
+    --card-bg-hover: hsl(228, 28%, 20%); /*Card BG hover*/
     font-family: 'Inter', sans-serif;;
     color: var(--white);
     background-color: var(--very-dark-blue);
@@ -42,6 +43,7 @@ body {
 .light-mode {
     --top-bg: hsl(225, 100%, 98%); /*Top BG Pattern*/
     --card-bg: hsl(227, 47%, 96%); /*Card BG*/
+    --card-bg-hover: #f2f2f2; /*Card BG hover*/
     color: var(--very-dark-blue);
     background-color: var(--white);
 }
@@ -152,7 +154,7 @@ input:checked + .slider:before {
 }
 
 .content > div:hover {
-    opacity: .9;
+    background-color: var(--card-bg-hover);
 }
 
 .box1 {
@@ -247,7 +249,7 @@ input:checked + .slider:before {
 }
 
 .social-cards:hover {
-    opacity: .9;
+    background-color: var(--card-bg-hover);
 }
 
 .top-data {
